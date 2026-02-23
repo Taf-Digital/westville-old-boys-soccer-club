@@ -755,3 +755,13 @@ main, section, .teams-wrapper, .detail-container {
     background: #cc0000;
     transform: translateY(-2px);
 }
+
+.about-container {
+    padding: 80px 10%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('images/Under15.jpg');
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
