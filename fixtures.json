@@ -1,0 +1,29 @@
+[
+  { "date": "04/05/2025", "home": "STELLA FC 1", "away": "DIFA 1", "venue": "Gladwyn Park", "time": "09:00", "field": "J6/7A" },
+  { "date": "04/05/2025", "home": "WOB 1", "away": "BYE", "venue": "Jimmy Bellows", "time": "09:00", "field": "J6/7A" },
+  { "date": "04/05/2025", "home": "VIRGINIA UTD 1", "away": "HILLCREST UTD 1", "venue": "Danville Park", "time": "09:00", "field": "J6A" },
+  { "date": "04/05/2025", "home": "VIRGINIA UTD 2", "away": "RIVERSIDE FC", "venue": "Danville Park", "time": "09:45", "field": "J6A" },
+
+  { "date": "11/05/2025", "home": "HILLCREST UTD 1", "away": "RIVERSIDE FC", "venue": "William Gillits", "time": "09:00", "field": "J6/7" },
+  { "date": "11/05/2025", "home": "BYE", "away": "STELLA FC 1", "venue": "College Rovers", "time": "09:00", "field": "J6/7A" },
+  { "date": "11/05/2025", "home": "WOB 1", "away": "VIRGINIA UTD 1", "venue": "Jimmy Bellows", "time": "09:00", "field": "J6/7" },
+  { "date": "11/05/2025", "home": "DIFA 1", "away": "VIRGINIA UTD 2", "venue": "College Rovers", "time": "09:45", "field": "J6/7A" },
+
+  { "date": "18/05/2025", "home": "HILLCREST UTD 1", "away": "DIFA 1", "venue": "William Gillits", "time": "09:00", "field": "J6/8A" },
+  { "date": "18/05/2025", "home": "RIVERSIDE FC", "away": "WOB 1", "venue": "Riverside", "time": "09:00", "field": "J6/8" },
+  { "date": "18/05/2025", "home": "VIRGINIA UTD 1", "away": "STELLA FC 1", "venue": "Danville Park", "time": "09:00", "field": "J6" },
+  { "date": "18/05/2025", "home": "VIRGINIA UTD 2", "away": "BYE", "venue": "Danville Park", "time": "09:45", "field": "J6" },
+
+  { "date": "25/05/2025", "home": "DIFA 1", "away": "WOB 1", "venue": "College Rovers", "time": "09:00", "field": "J1" },
+  { "date": "25/05/2025", "home": "BYE", "away": "HILLCREST UTD 1", "venue": "College Rovers", "time": "09:00", "field": "J2" },
+  { "date": "25/05/2025", "home": "RIVERSIDE FC", "away": "STELLA FC 1", "venue": "Riverside", "time": "09:00", "field": "J1" },
+  { "date": "25/05/2025", "home": "VIRGINIA UTD 1", "away": "VIRGINIA UTD 2", "venue": "Danville", "time": "09:00", "field": "J6A" },
+
+  { "date": "08/06/2025", "home": "VIRGINIA UTD 1", "away": "DIFA 1", "venue": "Danville", "time": "09:00", "field": "U6" },
+  { "date": "08/06/2025", "home": "STELLA FC 1", "away": "HILLCREST UTD 1", "venue": "Gladwyn Park", "time": "09:00", "field": "U6A" },
+  { "date": "08/06/2025", "home": "VIRGINIA UTD 2", "away": "WOB 1", "venue": "Danville", "time": "09:45", "field": "U6" },
+
+  { "date": "15/06/2025", "home": "VIRGINIA UTD 1", "away": "RIVERSIDE FC", "venue": "Danville", "time": "09:00", "field": "J6" },
+  { "date": "15/06/2025", "home": "WOB 1", "away": "STELLA FC 1", "venue": "Jimmy Bellows", "time": "09:00", "field": "J6/7" },
+  { "date": "15/06/2025", "home": "HILLCREST UTD 1", "away": "VIRGINIA UTD 2", "venue": "William Gillits", "time": "09:00", "field": "J6" }
+]

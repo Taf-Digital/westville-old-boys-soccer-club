@@ -6,26 +6,41 @@
     <title>Schedule | Westville Old Boys Football Club</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+
     <style>
         .schedule-section {
             padding: 80px 5%;
             background: linear-gradient(to right, #0022ff 0%, #0022ff 50%, #ee0000 50%, #ee0000 100%);
             min-height: 100vh;
         }
+
         .schedule-section h2 {
             text-align: center;
             font-size: 2.5rem;
             color: #fff;
             margin-bottom: 10px;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
+
         .schedule-section .subtitle {
             text-align: center;
             color: #fff;
             font-style: italic;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
+
+        .team-filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team-filter select {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: none;
+        }
+
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
@@ -34,41 +49,29 @@
             border-radius: 8px;
             overflow: hidden;
         }
+
         .schedule-table th, .schedule-table td {
             padding: 15px 12px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
+
         .schedule-table th {
             background: #2de2e2;
-            color: #000;
             font-weight: 800;
             text-transform: uppercase;
             font-size: 0.85rem;
         }
+
         .schedule-table tr:hover {
             background: #f9f9f9;
         }
-        .schedule-table .wob-match {
+
+        .wob-match {
             background: #e6fff9;
             font-weight: 700;
         }
-        .schedule-table .cup-row {
-            background: #ffe066;
-            font-weight: 700;
-            text-align: center;
-        }
-        .team-filter {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .team-filter select {
-            padding: 12px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+
         @media (max-width: 768px) {
             .schedule-table th, .schedule-table td {
                 padding: 10px 6px;
@@ -77,270 +80,115 @@
         }
     </style>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/LOGO.jpg" alt="Logo" class="logo-image">
-                <span class="logo-text">Westville Old Boys Football Club</span>
-            </a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="index.html">HOME</a></li>
-            <li><a href="Training.html">TRAINING</a></li> 
-            <li><a href="Schedule.html">SCHEDULE</a></li>
-            <li><a href="Teams.html">TEAMS</a></li>
-            <li><a href="coaches.html">COACHES</a></li>
-            <li><a href="Gallery.html">GALLERY</a></li>
-             <li><a href="Contact.html">CONTACT US</a></li>
-            <li><a href="#">ABOUT US</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/LOGO.jpg" alt="Logo" class="logo-image">
+            <span class="logo-text">Westville Old Boys Football Club</span>
+        </a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="Training.html">TRAINING</a></li> 
+        <li><a href="Schedule.html">SCHEDULE</a></li>
+        <li><a href="Teams.html">TEAMS</a></li>
+        <li><a href="coaches.html">COACHES</a></li>
+        <li><a href="Gallery.html">GALLERY</a></li>
+        <li><a href="Contact.html">CONTACT US</a></li>
+        <li><a href="#">ABOUT US</a></li>
+    </ul>
+</nav>
 
-    <section class="schedule-section">
-        <h2>U6.1 Fixtures</h2>
-        <p class="subtitle">2026 GDLFA Junior League Schedule</p>
+<section class="schedule-section">
 
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Home Team</th>
-                    <th></th>
-                    <th>Away Team</th>
-                    <th>Venue</th>
-                    <th>Time</th>
-                    <th>Field</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>04/05/2025</td>
-                    <td>STELLA FC 1</td>
-                    <td>VS</td>
-                    <td>DIFA 1</td>
-                    <td>Gladwyn Park</td>
-                    <td>09:00</td>
-                    <td>J6/7A</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>04/05/2025</td>
-                    <td>WOB 1</td>
-                    <td>VS</td>
-                    <td>BYE</td>
-                    <td>Jimmy Bellows</td>
-                    <td>09:00</td>
-                    <td>J6/7A</td>
-                </tr>
-                <tr>
-                    <td>04/05/2025</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>VS</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>Danville Park</td>
-                    <td>09:00</td>
-                    <td>J6A</td>
-                </tr>
-                <tr>
-                    <td>04/05/2025</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>VS</td>
-                    <td>RIVERSIDE FC</td>
-                    <td>Danville Park</td>
-                    <td>09:45</td>
-                    <td>J6A</td>
-                </tr>
-                <tr>
-                    <td>11/05/2025</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>VS</td>
-                    <td>RIVERSIDE FC</td>
-                    <td>William Gillits</td>
-                    <td>09:00</td>
-                    <td>J6/7</td>
-                </tr>
-                <tr>
-                    <td>11/05/2025</td>
-                    <td>BYE</td>
-                    <td>VS</td>
-                    <td>STELLA FC 1</td>
-                    <td>College Rovers</td>
-                    <td>09:00</td>
-                    <td>J6/7A</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>11/05/2025</td>
-                    <td>WOB 1</td>
-                    <td>VS</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>Jimmy Bellows</td>
-                    <td>09:00</td>
-                    <td>J6/7</td>
-                </tr>
-                <tr>
-                    <td>11/05/2025</td>
-                    <td>DIFA 1</td>
-                    <td>VS</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>College Rovers</td>
-                    <td>09:45</td>
-                    <td>J6/7A</td>
-                </tr>
-                <tr>
-                    <td>18/05/2025</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>VS</td>
-                    <td>DIFA 1</td>
-                    <td>William Gillits</td>
-                    <td>09:00</td>
-                    <td>J6/8A</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>18/05/2025</td>
-                    <td>RIVERSIDE FC</td>
-                    <td>VS</td>
-                    <td>WOB 1</td>
-                    <td>Riverside</td>
-                    <td>09:00</td>
-                    <td>J6/8</td>
-                </tr>
-                <tr>
-                    <td>18/05/2025</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>VS</td>
-                    <td>STELLA FC 1</td>
-                    <td>Danville Park</td>
-                    <td>09:00</td>
-                    <td>J6</td>
-                </tr>
-                <tr>
-                    <td>18/05/2025</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>VS</td>
-                    <td>BYE</td>
-                    <td>Danville Park</td>
-                    <td>09:45</td>
-                    <td>J6</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>25/05/2025</td>
-                    <td>DIFA 1</td>
-                    <td>VS</td>
-                    <td>WOB 1</td>
-                    <td>College Rovers</td>
-                    <td>09:00</td>
-                    <td>J1</td>
-                </tr>
-                <tr>
-                    <td>25/05/2025</td>
-                    <td>BYE</td>
-                    <td>VS</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>College Rovers</td>
-                    <td>09:00</td>
-                    <td>J2</td>
-                </tr>
-                <tr>
-                    <td>25/05/2025</td>
-                    <td>RIVERSIDE FC</td>
-                    <td>VS</td>
-                    <td>STELLA FC 1</td>
-                    <td>Riverside</td>
-                    <td>09:00</td>
-                    <td>J1</td>
-                </tr>
-                <tr>
-                    <td>25/05/2025</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>VS</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>Danville</td>
-                    <td>09:00</td>
-                    <td>J6A</td>
-                </tr>
-                <tr class="cup-row">
-                    <td colspan="7">01/06/2025 — Prelim Round Cup Games</td>
-                </tr>
-                <tr>
-                    <td>08/06/2025</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>VS</td>
-                    <td>DIFA 1</td>
-                    <td>Danville</td>
-                    <td>09:00</td>
-                    <td>U6</td>
-                </tr>
-                <tr>
-                    <td>08/06/2025</td>
-                    <td>STELLA FC 1</td>
-                    <td>VS</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>Gladwyn Park</td>
-                    <td>09:00</td>
-                    <td>U6A</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>08/06/2025</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>VS</td>
-                    <td>WOB 1</td>
-                    <td>Danville</td>
-                    <td>09:45</td>
-                    <td>U6</td>
-                </tr>
-                <tr>
-                    <td>15/06/2025</td>
-                    <td>VIRGINIA UTD 1</td>
-                    <td>VS</td>
-                    <td>RIVERSIDE FC</td>
-                    <td>Danville</td>
-                    <td>09:00</td>
-                    <td>J6</td>
-                </tr>
-                <tr class="wob-match">
-                    <td>15/06/2025</td>
-                    <td>WOB 1</td>
-                    <td>VS</td>
-                    <td>STELLA FC 1</td>
-                    <td>Jimmy Bellows</td>
-                    <td>09:00</td>
-                    <td>J6/7</td>
-                </tr>
-                <tr>
-                    <td>15/06/2025</td>
-                    <td>HILLCREST UTD 1</td>
-                    <td>VS</td>
-                    <td>VIRGINIA UTD 2</td>
-                    <td>William Gillits</td>
-                    <td>09:00</td>
-                    <td>J6</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
- <footer class="main-footer">
+    <h2>U6.1 Fixtures</h2>
+    <p class="subtitle">2026 GDLFA Junior League Schedule</p>
+
+    <!-- FILTER -->
+    <div class="team-filter">
+        <select id="teamFilter">
+            <option value="all">All Matches</option>
+            <option value="wob">WOB Matches Only</option>
+        </select>
+    </div>
+
+    <!-- TABLE -->
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Home Team</th>
+                <th></th>
+                <th>Away Team</th>
+                <th>Venue</th>
+                <th>Time</th>
+                <th>Field</th>
+            </tr>
+        </thead>
+        <tbody id="scheduleBody">
+            <!-- Filled dynamically -->
+        </tbody>
+    </table>
+
+</section>
+
+<footer class="main-footer">
     <div class="footer-content">
         <p class="footer-club-name">WESTVILLE OLD BOYS FOOTBALL CLUB</p>
-        
-        <div class="social-container">
-            <a href="https://www.facebook.com/profile.php?id=100092249469856" target="_blank" class="social-link">
-                <img src="images/Facebook.jpg" alt="Facebook" class="social-logo">
-            </a>
-
-            <a href="https://www.instagram.com/westvilleoldboysfc/" target="_blank" class="social-link">
-                <img src="images/Instagram.jpg" alt="Instagram" class="social-logo">
-            </a>
-
-            <a href="https://www.tiktok.com/@wobfc" target="_blank" class="social-link">
-                <img src="images/Tiktok.jpeg" alt="TikTok" class="social-logo">
-            </a>
-        </div>
-
         <p class="footer-tagline">Where Passion Meets Excellence</p>
         <p class="copyright">&copy; 2026 WOBFC | Jimmy Bellows Sports Field</p>
     </div>
 </footer>
+
+<script>
+
+let fixturesData = [];
+
+fetch("fixtures.json")
+.then(response => response.json())
+.then(data => {
+    fixturesData = data;
+    renderTable("all");
+});
+
+function renderTable(filter) {
+    const tbody = document.getElementById("scheduleBody");
+    tbody.innerHTML = "";
+
+    fixturesData.forEach(match => {
+
+        const isWOB = match.home.includes("WOB") || match.away.includes("WOB");
+
+        if (filter === "wob" && !isWOB) return;
+
+        const row = document.createElement("tr");
+
+        if (isWOB) {
+            row.classList.add("wob-match");
+        }
+
+        row.innerHTML = `
+            <td>${match.date}</td>
+            <td>${match.home}</td>
+            <td>VS</td>
+            <td>${match.away}</td>
+            <td>${match.venue}</td>
+            <td>${match.time}</td>
+            <td>${match.field}</td>
+        `;
+
+        tbody.appendChild(row);
+    });
+}
+
+document.getElementById("teamFilter").addEventListener("change", function() {
+    renderTable(this.value);
+});
+
+</script>
 
 </body>
 </html>
