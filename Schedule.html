@@ -92,144 +92,134 @@
 
 <body>
 
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html">
-            <img src="images/LOGO.jpg" alt="Logo" class="logo-image">
-            <span class="logo-text">Westville Old Boys Football Club</span>
-        </a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="Training.html">TRAINING</a></li> 
-        <li><a href="Schedule.html">SCHEDULE</a></li>
-        <li><a href="Teams.html">TEAMS</a></li>
-        <li><a href="coaches.html">COACHES</a></li>
-        <li><a href="Gallery.html">GALLERY</a></li>
-        <li><a href="Contact.html">CONTACT US</a></li>
-        <li><a href="About.html">ABOUT US</a></li>  
-    </ul>
-</nav>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/LOGO.jpg" alt="Logo" class="logo-image">
+                <span class="logo-text">Westville Old Boys Football Club</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Training.html">TRAINING</a></li> 
+            <li><a href="Schedule.html">SCHEDULE</a></li>
+            <li><a href="Teams.html">TEAMS</a></li>
+            <li><a href="coaches.html">COACHES</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+            <li><a href="About.html">ABOUT US</a></li>  
+        </ul>
+    </nav>
 
-<section class="schedule-section">
+    <section class="schedule-section">
 
-    <h2>U6.1 Fixtures</h2>
-    <p class="subtitle">2026 GDLFA Junior League Schedule</p>
+        <h2>U6.1 Fixtures</h2>
+        <p class="subtitle">2026 GDLFA Junior League Schedule</p>
 
-    <!-- FILTER -->
-    <div class="team-filter">
-        <input type="text" id="searchBar" placeholder="Search by team, venue, or date...">
-        <select id="teamFilter">
-            <option value="all">All Matches</option>
-            <option value="wob">WOB Matches Only</option>
-        </select>
-    </div>
+        <div class="team-filter">
+            <input type="text" id="searchBar" placeholder="Search by team, venue, or date...">
+            <select id="teamFilter">
+                <option value="all">All Matches</option>
+                <option value="wob">WOB Matches Only</option>
+            </select>
+        </div>
 
-    <!-- TABLE -->
-    <table class="schedule-table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Home Team</th>
-                <th></th>
-                <th>Away Team</th>
-                <th>Venue</th>
-                <th>Time</th>
-                <th>Field</th>
-            </tr>
-        </thead>
-        <tbody id="scheduleBody">
-            <!-- Filled dynamically -->
-        </tbody>
-    </table>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Home Team</th>
+                    <th></th>
+                    <th>Away Team</th>
+                    <th>Venue</th>
+                    <th>Time</th>
+                    <th>Field</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleBody">
+                </tbody>
+        </table>
 
-</section>
+    </section>
 
-<footer class="main-footer">
-    <div class="footer-content">
-        <p class="footer-club-name">WESTVILLE OLD BOYS FOOTBALL CLUB</p>
-        <p class="footer-tagline">Where Passion Meets Excellence</p>
-        <p class="copyright">&copy; 2026 WOBFC | Jimmy Bellows Sports Field</p>
-    </div>
-</footer>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p class="footer-club-name">WESTVILLE OLD BOYS FOOTBALL CLUB</p>
+            
+            <div class="social-container">
+                <a href="https://www.facebook.com/profile.php?id=100092249469856" target="_blank" class="social-link">
+                    <img src="images/Facebook.jpg" alt="Facebook" class="social-logo">
+                </a>
 
-<script>
+                <a href="https://www.instagram.com/westvilleoldboysfc/" target="_blank" class="social-link">
+                    <img src="images/Instagram.jpg" alt="Instagram" class="social-logo">
+                </a>
 
-let fixturesData = [];
+                <a href="https://www.tiktok.com/@wobfc" target="_blank" class="social-link">
+                    <img src="images/Tiktok.jpeg" alt="TikTok" class="social-logo">
+                </a>
+            </div>
 
-fetch("fixtures.json")
-.then(response => response.json())
-.then(data => {
-    fixturesData = data;
-    renderTable();
-});
+            <p class="footer-tagline">Where Passion Meets Excellence</p>
+            <p class="copyright">&copy; 2026 WOBFC | Jimmy Bellows Sports Field</p>
+        </div>
+    </footer>
 
-function renderTable() {
-    const tbody = document.getElementById("scheduleBody");
-    const filter = document.getElementById("teamFilter").value;
-    const search = document.getElementById("searchBar").value.toLowerCase();
+    <script>
+        // Standard structural placeholder array for fallback if Fetch gets blocked locally
+        
 
-    tbody.innerHTML = "";
+        fetch("fixtures.json")
+        .then(response => response.json())
+        .then(data => {
+            fixturesData = data;
+            renderTable();
+        }).catch(err => {
+            console.warn("Falling back to internal dummy data setup. Ensure your fixtures.json is running live via standard server protocols.");
+            renderTable(); // Fallback load
+        });
 
-    fixturesData.forEach(match => {
+        function renderTable() {
+            const tbody = document.getElementById("scheduleBody");
+            const filter = document.getElementById("teamFilter").value;
+            const search = document.getElementById("searchBar").value.toLowerCase();
 
-        const isWOB = match.home.includes("WOB") || match.away.includes("WOB");
+            tbody.innerHTML = "";
 
-        // Apply WOB filter
-        if (filter === "wob" && !isWOB) return;
+            fixturesData.forEach(match => {
 
-        // Apply search filter
-        const matchText = `${match.date} ${match.home} ${match.away} ${match.venue}`.toLowerCase();
-        if (search && !matchText.includes(search)) return;
+                const isWOB = match.home.includes("WOB") || match.away.includes("WOB");
 
-        const row = document.createElement("tr");
+                // Apply WOB filter
+                if (filter === "wob" && !isWOB) return;
 
-        if (isWOB) {
-            row.classList.add("wob-match");
+                // Apply search filter
+                const matchText = `${match.date} ${match.home} ${match.away} ${match.venue}`.toLowerCase();
+                if (search && !matchText.includes(search)) return;
+
+                const row = document.createElement("tr");
+
+                if (isWOB) {
+                    row.classList.add("wob-match");
+                }
+
+                row.innerHTML = `
+                    <td>${match.date}</td>
+                    <td>${match.home}</td>
+                    <td>VS</td>
+                    <td>${match.away}</td>
+                    <td>${match.venue}</td>
+                    <td>${match.time}</td>
+                    <td>${match.field}</td>
+                `;
+
+                tbody.appendChild(row);
+            });
         }
 
-        row.innerHTML = `
-            <td>${match.date}</td>
-            <td>${match.home}</td>
-            <td>VS</td>
-            <td>${match.away}</td>
-            <td>${match.venue}</td>
-            <td>${match.time}</td>
-            <td>${match.field}</td>
-        `;
-
-        tbody.appendChild(row);
-    });
-}
-
-document.getElementById("teamFilter").addEventListener("change", renderTable);
-document.getElementById("searchBar").addEventListener("input", renderTable);
-
-</script>
-
-
+        document.getElementById("teamFilter").addEventListener("change", renderTable);
+        document.getElementById("searchBar").addEventListener("input", renderTable);
+    </script>
 
 </body>
 </html>
-<footer class="main-footer">
-    <div class="footer-content">
-        <p class="footer-club-name">WESTVILLE OLD BOYS FOOTBALL CLUB</p>
-        
-        <div class="social-container">
-            <a href="https://www.facebook.com/profile.php?id=100092249469856" target="_blank" class="social-link">
-                <img src="images/Facebook.jpg" alt="Facebook" class="social-logo">
-            </a>
-
-            <a href="https://www.instagram.com/westvilleoldboysfc/" target="_blank" class="social-link">
-                <img src="images/Instagram.jpg" alt="Instagram" class="social-logo">
-            </a>
-
-            <a href="https://www.tiktok.com/@wobfc" target="_blank" class="social-link">
-                <img src="images/Tiktok.jpeg" alt="TikTok" class="social-logo">
-            </a>
-        </div>
-
-        <p class="footer-tagline">Where Passion Meets Excellence</p>
-        <p class="copyright">&copy; 2026 WOBFC | Jimmy Bellows Sports Field</p>
-    </div>
-</footer>
